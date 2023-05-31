@@ -54,3 +54,107 @@ INSERT INTO locations(country, location_name) VALUES ('North Korea', 'Sohae Sate
 -- ====================================================================================================
 --                                      ROCKETS
 -- ====================================================================================================
+-- SpaceX rockets
+INSERT INTO rockets(name, active) VALUES ('Falcon 1', false);
+INSERT INTO rockets(name, active) VALUES ('Falcon 9 v1.0', false);
+INSERT INTO rockets(name, active) VALUES ('Falcon 9 v1.1', false);
+INSERT INTO rockets(name, active) VALUES ('Falcon 9 Block 3', false);
+INSERT INTO rockets(name, active) VALUES ('Falcon 9 Block 4', false);
+INSERT INTO rockets(name, active) VALUES ('Falcon Heavy', true);
+INSERT INTO rockets(name, active) VALUES ('Falcon 9 Block 5', true);
+INSERT INTO rockets(name, active) VALUES ('Starship Prototype', true);
+-- US Air Force rockets  
+INSERT INTO rockets(name, active) VALUES ('Thor-DM 18 Able I', false);
+INSERT INTO rockets(name, active) VALUES ('SM-65B Atlas', false);
+INSERT INTO rockets(name, active) VALUES ('Thor DM-18 Able-III', false);
+INSERT INTO rockets(name, active) VALUES ('Thor DM-18 Able-II', false);
+INSERT INTO rockets(name, active) VALUES ('Thor DM-18 Able-IV', false);
+INSERT INTO rockets(name, active) VALUES ('Thor DM-18 Able-II', false);
+INSERT INTO rockets(name, active) VALUES ('Thor-DM21 Ablestar', false);
+INSERT INTO rockets(name, active) VALUES ('Thor-DM18 Agena-A', false);
+INSERT INTO rockets(name, active) VALUES ('Thor DM-19 Delta', false);
+INSERT INTO rockets(name, active) VALUES ('Thor DM-21 Agena-B', false);
+INSERT INTO rockets(name, active) VALUES ('Scout X-2M', false);
+INSERT INTO rockets(name, active) VALUES ('Delta A', false);
+INSERT INTO rockets(name, active) VALUES ('Thor DM-21 Agena-D', false);
+INSERT INTO rockets(name, active) VALUES ('Delta B', false);
+INSERT INTO rockets(name, active) VALUES ('Scout X-3', false);
+INSERT INTO rockets(name, active) VALUES ('Scout X-3M', false);
+INSERT INTO rockets(name, active) VALUES ('Scout X-4', false);
+INSERT INTO rockets(name, active) VALUES ('Scout X-2B', false);
+INSERT INTO rockets(name, active) VALUES ('Titan IIIA', false);
+INSERT INTO rockets(name, active) VALUES ('Titan IIIB', false);
+INSERT INTO rockets(name, active) VALUES ('Titan III(23)B', false);
+INSERT INTO rockets(name, active) VALUES ('Titan III(24)B', false);
+
+-- RVSN USSR rockets
+-- NASA rockets
+
+-- Arianespace rockets
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+INSERT INTO rockets(name, active) VALUES ('', false);
+
+-- Boeing rockets
+
+-- Blue Origin rockets
+
+-- CASC rockets
+
+-- General Dynamics rockets 
+INSERT INTO rockets(name, active) VALUES ('Atlas-D Able', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-LV3 Agena-A', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-LV3 Agena-B', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-LV3C Centaur-A', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-LV3 Agena-D', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-LV3C Centaur-B', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-LV3C Centaur-C', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-SLV3 Agena-D', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-D OV1', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-LV3C Centaur-D', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-SLV3C Centaur-D', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-E/F OV1', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-SLV3 Burner-2', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-E/F Burner', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-SLV3A Agena-D', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-E/F PTS', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-E/F Star-17A', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-SLV3D Centaur-D1A', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-SLV3D Centaur-D1AR', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-E/F MSD', false);
+
+INSERT INTO rockets(name, active) VALUES ('Atlas-E/F SGS-1', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-E/F Agena D', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-E/F Star-37S-ISS', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-E/F OIS', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-H MSD', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas-G Centaur-D1AR', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas I', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas II', false);
+INSERT INTO rockets(name, active) VALUES ('Atlas IIA', false);
+-- KCST Rockets
+INSERT INTO rockets(name, active) VALUES ('Taepodong-1', false);
+INSERT INTO rockets(name, active) VALUES ('Unha-2', false);
+INSERT INTO rockets(name, active) VALUES ('Unha-3', true);
+
