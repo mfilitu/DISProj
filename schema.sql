@@ -1,4 +1,4 @@
--- \i schema_drop.sql
+\i schema_drop.sql
 
 CREATE TABLE IF NOT EXISTS Rockets(
     id SERIAL PRIMARY KEY,
