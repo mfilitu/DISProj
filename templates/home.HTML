@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C</title>
+</head>
+<body>
+    <h1>Company </h1>
+
+    <form action="/rockets" method="POST">
+        <label for="company">Select a company:</label>
+        <select name="company" id="company">
+            {% for company in companies %}
+                <option value="{{ company }}">{{ company }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
