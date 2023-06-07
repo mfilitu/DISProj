@@ -2,13 +2,13 @@
 
 CREATE TABLE IF NOT EXISTS Rockets(
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
+    rocket_name VARCHAR(255),
     active BOOLEAN
 );
 
 CREATE TABLE IF NOT EXISTS Companies(
     id SERIAL PRIMARY KEY
-    name VARCHAR(255)
+    company_name VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS Locations(
