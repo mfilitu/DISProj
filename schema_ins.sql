@@ -149,9 +149,7 @@ INSERT INTO rockets(name, active) VALUES ('Jielong-1', true);
 INSERT INTO rockets(name, active) VALUES ('Long March 1', false);
 INSERT INTO rockets(name, active) VALUES ('Long March 2', false);
 INSERT INTO rockets(name, active) VALUES ('Long March 11', true);
-INSERT INTO rockets(name, active) VALUES ('Long March 2C', true);
 INSERT INTO rockets(name, active) VALUES ('Long March 3', false);
-INSERT INTO rockets(name, active) VALUES ('Long March 3B', true); 
 INSERT INTO rockets(name, active) VALUES ('Long March 5', true);
 INSERT INTO rockets(name, active) VALUES ('Long March 6', true);
 INSERT INTO rockets(name, active) VALUES ('Long March 7', true);
@@ -159,15 +157,7 @@ INSERT INTO rockets(name, active) VALUES ('Long March 7', true);
 
 -- General Dynamics rockets 
 INSERT INTO rockets(name, active) VALUES ('Atlas-D', false);
-INSERT INTO rockets(name, active) VALUES ('Atlas-LV3', false);
-INSERT INTO rockets(name, active) VALUES ('Atlas-LV3C', false);
 INSERT INTO rockets(name, active) VALUES ('Atlas-SLV3', false);
-INSERT INTO rockets(name, active) VALUES ('Atlas-LV3C', false);
-INSERT INTO rockets(name, active) VALUES ('Atlas-SLV3C', false);
-INSERT INTO rockets(name, active) VALUES ('Atlas-E/F', false);
-INSERT INTO rockets(name, active) VALUES ('Atlas-SLV3D', false);
-INSERT INTO rockets(name, active) VALUES ('Atlas-H', false);
-INSERT INTO rockets(name, active) VALUES ('Atlas-G', false);
 INSERT INTO rockets(name, active) VALUES ('Atlas I', false);
 INSERT INTO rockets(name, active) VALUES ('Atlas II', false);
 
@@ -187,18 +177,15 @@ VALUES ('2012-10-08', false, 59.5,
     (SELECT id from companies where name = 'SpaceX')
     (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
-
 VALUES ('2020-08-07', true, 50, 
     (SELECT id from rockets where name = 'Falcon 9')
     (SELECT id from companies where name = 'SpaceX')
     (SELECT id from locations where location_name = 'Kennedy Space Center'));
-
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2006-03-24', false, 7, 
     (SELECT id from rockets where name = 'Falcon 1')
     (SELECT id from companies where name = 'SpaceX')
     (SELECT id from locations where location_name = 'Omelek Island'));
-
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2009-07-14', true, 7, 
     (SELECT id from rockets where name = 'Falcon 1')
@@ -219,21 +206,232 @@ VALUES ('2020-08-04', true, 90,
     (SELECT id from rockets where name = 'Starship Prototype')
     (SELECT id from companies where name = 'SpaceX')
     (SELECT id from locations where location_name = 'Boca Chica'));
--- US Air Force rockets  
+-- US Air Force missions  
 
--- RVSN USSR rockets
+-- RVSN USSR missions
 
--- NASA rockets
+-- NASA missions
 
--- Arianespace rockets
+-- Arianespace missions
 
--- Boeing rockets
+-- Boeing missions
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1995-01-14', false, NULL, 
+    (SELECT id from rockets where name = 'Delta II')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2004-07-15', true, NULL, 
+    (SELECT id from rockets where name = 'Delta II')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Vandenberg AFB'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1989-08-27', true, NULL, 
+    (SELECT id from rockets where name = 'Delta II')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1989-08-27', true, NULL, 
+    (SELECT id from rockets where name = 'Delta II')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1999-05-05', false, NULL, 
+    (SELECT id from rockets where name = 'Delta III')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1998-08-27', false, NULL, 
+    (SELECT id from rockets where name = 'Delta III')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2000-08-23', true, NULL, 
+    (SELECT id from rockets where name = 'Delta III')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
--- Blue Origin rockets
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1999-05-05', false, NULL, 
+    (SELECT id from rockets where name = 'Delta III')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1999-05-05', false, NULL, 
+    (SELECT id from rockets where name = 'Delta III')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2006-05-24', true, 164.0, 
+    (SELECT id from rockets where name = 'Delta IV')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2006-06-28', true, 164.0, 
+    (SELECT id from rockets where name = 'Delta IV')
+    (SELECT id from companies where name = 'Boeing')
+    (SELECT id from locations where location_name = 'Vandenberg AFB'));
 
--- CASC rockets
+-- Blue Origin missions
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2019-12-11', true, NULL, 
+    (SELECT id from rockets where name = 'New Shepard')
+    (SELECT id from companies where name = 'Blue Origin')
+    (SELECT id from locations where location_name = 'Blue Origin Launch Site'));
 
--- General Dynamics rockets 
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2015-04-29', true, NULL, 
+    (SELECT id from rockets where name = 'New Shepard')
+    (SELECT id from companies where name = 'Blue Origin')
+    (SELECT id from locations where location_name = 'Blue Origin Launch Site'));
 
--- KCST Rockets
+-- CASC missions
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1973-09-18', false, NULL, 
+    (SELECT id from rockets where name = 'Fang Bao 1')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Jiuquan Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1976-11-10', false, NULL, 
+    (SELECT id from rockets where name = 'Fang Bao 1')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Jiuquan Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1981-09-19', true, NULL, 
+    (SELECT id from rockets where name = 'Fang Bao 1')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Jiuquan Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1979-07-27', false, NULL, 
+    (SELECT id from rockets where name = 'Fang Bao 1')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Jiuquan Satellite Launch Center'));
 
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2019-08-17', true, 7.5, 
+    (SELECT id from rockets where name = 'Jielong-1')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Jiuquan Satellite Launch Center'));
+
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1971-03-03', true, NULL, 
+    (SELECT id from rockets where name = 'Long March 1')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Jiuquan Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1969-11-16', false, NULL, 
+    (SELECT id from rockets where name = 'Long March 1')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Jiuquan Satellite Launch Center'));
+
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2019-06-05', true, 5.3, 
+    (SELECT id from rockets where name = 'Long March 11')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Tai Rui Barge'));
+
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1982-09-09', true, 30.8, 
+    (SELECT id from rockets where name = 'Long March 2')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Jiuquan Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2004-07-25', true, 30.8, 
+    (SELECT id from rockets where name = 'Long March 2')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Taiyuan Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2019-01-10', true, 29.15, 
+    (SELECT id from rockets where name = 'Long March 3')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Xichang Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2017-07-02', false, NULL, 
+    (SELECT id from rockets where name = 'Long March 5')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Wenchang Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2020-07-23', true, NULL, 
+    (SELECT id from rockets where name = 'Long March 5')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Wenchang Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2017-11-21', true, NULL, 
+    (SELECT id from rockets where name = 'Long March 6')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Taiyuan Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2020-03-16', false, NULL, 
+    (SELECT id from rockets where name = 'Long March 7')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Wenchang Satellite Launch Center'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2016-06-25', true, NULL, 
+    (SELECT id from rockets where name = 'Long March 7')
+    (SELECT id from companies where name = 'CASC')
+    (SELECT id from locations where location_name = 'Wenchang Satellite Launch Center'));
+-- General Dynamics missions 
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1991-04-18', false, NULL, 
+    (SELECT id from rockets where name = 'Atlas I')
+    (SELECT id from companies where name = 'General Dynamics')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1990-07-25', true, NULL, 
+    (SELECT id from rockets where name = 'Atlas I')
+    (SELECT id from companies where name = 'General Dynamics')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1959-11-26', false, NULL, 
+    (SELECT id from rockets where name = 'Atlas-D')
+    (SELECT id from companies where name = 'General Dynamics')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1966-12-11', true, NULL, 
+    (SELECT id from rockets where name = 'Atlas-D')
+    (SELECT id from companies where name = 'General Dynamics')
+    (SELECT id from locations where location_name = 'Vandenberg AFB'));
+
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1992-02-11', true, NULL, 
+    (SELECT id from rockets where name = 'Atlas II')
+    (SELECT id from companies where name = 'General Dynamics')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1964-09-23', true, NULL, 
+    (SELECT id from rockets where name = 'Atlas-SLV3')
+    (SELECT id from companies where name = 'General Dynamics')
+    (SELECT id from locations where location_name = 'Vandenberg AFB'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1972-12-20', true, NULL, 
+    (SELECT id from rockets where name = 'Atlas-SLV3')
+    (SELECT id from companies where name = 'General Dynamics')
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
+-- KCST missions
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('1998-08-31', false, NULL, 
+    (SELECT id from rockets where name = 'Taepodong')
+    (SELECT id from companies where name = 'KCST')
+    (SELECT id from locations where location_name = 'Tonghae Satellite Launching Ground'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2009-04-05', false, NULL, 
+    (SELECT id from rockets where name = 'Unha')
+    (SELECT id from companies where name = 'KCST')
+    (SELECT id from locations where location_name = 'Tonghae Satellite Launching Ground'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2012-04-12', false, NULL, 
+    (SELECT id from rockets where name = 'Unha')
+    (SELECT id from companies where name = 'KCST')
+    (SELECT id from locations where location_name = 'Sohae Satellite Launching Station'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2012-12-12', true, NULL, 
+    (SELECT id from rockets where name = 'Unha')
+    (SELECT id from companies where name = 'KCST')
+    (SELECT id from locations where location_name = 'Sohae Satellite Launching Station'));
+INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
+VALUES ('2016-02-07', true, NULL, 
+    (SELECT id from rockets where name = 'Unha')
+    (SELECT id from companies where name = 'KCST')
+    (SELECT id from locations where location_name = 'Sohae Satellite Launching Station'));
