@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DISTEST</title>
+</head>
+<body>
+    <h1>Rockets</h1>
+
+    <form action="/successrate" method="POST">
+        <label for="rocket">Select a rocket:</label>
+        <select name="rocket" id="rocket">
+            {% for rocket in rockets %}
+                <option value="{{ rocket }}">{{ rocket }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

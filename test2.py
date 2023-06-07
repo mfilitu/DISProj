@@ -7,20 +7,20 @@ app.config['SECRET_KEY'] = 'secret'
 
 @app.route('/')
 def home():
-	Companies = get_company_name()
+	companies = get_company_name()
 
-	return render_template('home.html', Companies=Companies)
+	return render_template('home.html', companies=companies)
 
 @app.route('/rockets', methods=['POST'])
 def rockets():
-	company_name = request.form['Companies']
+	company_name = request.form['company']
 	rockets = get_rockets_by_company(company_name)
 	return render_template('rockets.html', rockets=rockets)
 
 def get_company_name():
 	conn = psycopg2.connect("dbname=distest user=postgres password=1074")
 	cur = conn.cursor()
-	cur.execute("SELECT name FROM Companies")
+	cur.execute("SELECT company_name FROM Companies")
 	companies = cur.fetchall()
 	conn.close()
 	return companies
@@ -28,7 +28,7 @@ def get_company_name():
 def get_rockets_by_company(company_name):
 	conn = psycopg2.connect("dbname=distest user=postgres password=1074")
 	cur = conn.cursor()
-	cur.execute("SELECT launch_data, succesful, cost, rocket_id, company_id, location_id FROM rockets WHERE company_id = (SELECT name FROM company WHERE name = %s)", (company_name,))
+	cur.execute("SELECT rocket_name FROM Rockets WHERE id = (SELECT id FROM Companies WHERE company_name = %s)", (company_name,))
 	rockets = cur.fetchall()
 	conn.close()
 	return rockets

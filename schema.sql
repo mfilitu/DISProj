@@ -7,24 +7,27 @@ CREATE TABLE IF NOT EXISTS Rockets(
 );
 
 CREATE TABLE IF NOT EXISTS Companies(
-    id SERIAL PRIMARY KEY
+    id SERIAL PRIMARY KEY,
     company_name VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS Locations(
-    id SERIAL PRIMARY KEY
+    id SERIAL PRIMARY KEY,
     country VARCHAR(255),
     location_name VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS Missions(
-    id SERIAL PRIMARY KEY
+    id SERIAL PRIMARY KEY,
     launch_data DATE,
     succesful BOOLEAN,
     cost DOUBLE PRECISION,
-    FOREIGN KEY (rocket_id) REFERENCES Rocket(id),
-    FOREIGN KEY (company_id) REFERENCES Company(id),
-    FOREIGN KEY (location_id) REFERENCES Location(id)
+    rocket_id INTEGER,
+    company_id INTEGER,
+    location_id INTEGER,
+    FOREIGN KEY (rocket_id) REFERENCES Rockets(id),
+    FOREIGN KEY (company_id) REFERENCES Companies(id),
+    FOREIGN KEY (location_id) REFERENCES Locations(id)
 );
 
 CREATE TABLE IF NOT EXISTS Company_success_rate (
