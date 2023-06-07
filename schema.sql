@@ -20,7 +20,6 @@ CREATE TABLE IF NOT EXISTS Locations(
 CREATE TABLE IF NOT EXISTS Missions(
     id SERIAL PRIMARY KEY
     launch_data DATE,
-    location TEXT,
     succesful BOOLEAN,
     cost DOUBLE PRECISION,
     FOREIGN KEY (rocket_id) REFERENCES Rocket(id),
