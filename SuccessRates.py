@@ -1,5 +1,4 @@
 import psycopg2
-import numpy as np
 conn = psycopg2.connect("dbname=distest user=postgres password=postgres")
 
 def Insert_RocketSuccesRate(conn): 
@@ -16,10 +15,15 @@ def Insert_RocketSuccesRate(conn):
         MID_cursor.execute("SELECT COUNT(succesful) FROM Missions WHERE rocket_id = %s", (rid,))
         total_mission_rows = MID_cursor.fetchall()
         total = total_mission_rows[0][0]
+        sql = None
         if (total != 0):
             RocketSuccesRate = successful / total
-            INS_cursor.execute("""INSERT INTO Rocket_success_rate (rocket_id, success_rate)VALUES (%s, %s);""", (rid, RocketSuccesRate))
-            conn.commit()
+            sql = "INSERT INTO Rocket_success_rate (rocket_id, success_rate) VALUES ({}, {});".format(rid, RocketSuccesRate)
+        else:
+            sql = "INSERT INTO Rocket_success_rate (rocket_id, success_rate)VALUES (%s, NULL);".format(rid)
+        INS_cursor.execute(sql)
+        conn.commit()
+
 
 def Insert_CompanySuccesRate(conn): 
     CID_cursor = conn.cursor()
@@ -35,10 +39,14 @@ def Insert_CompanySuccesRate(conn):
         MID_cursor.execute("SELECT COUNT(succesful) FROM Missions WHERE company_id = %s", (cid,))
         total_mission_rows = MID_cursor.fetchone()
         total = total_mission_rows[0]
-        if (total != 0):
+        sql = None
+        if (total == 0):
+            sql = "INSERT INTO Company_success_rate (company_id, success_rate) VALUES ({}, NULL);".format(cid)
+        else:
             CompanySuccesRate = successful / total
-            INS_cursor.execute("""INSERT INTO Company_success_rate (company_id, success_rate)VALUES (%s, %s);""", (cid, CompanySuccesRate))
-            conn.commit()
+            sql = "INSERT INTO Company_success_rate (company_id, success_rate) VALUES ({}, {});".format(cid, CompanySuccesRate)
+        INS_cursor.execute(sql)
+        conn.commit()
 
 def Insert_LocationSuccesRate(conn): 
     LID_cursor = conn.cursor()
@@ -54,11 +62,31 @@ def Insert_LocationSuccesRate(conn):
         MID_cursor.execute("SELECT COUNT(succesful) FROM Missions WHERE location_id = %s", (lid,))
         total_mission_rows = MID_cursor.fetchone()
         total = total_mission_rows[0]
-        if (total != 0):
+        sql = None
+        if (total == 0):
+            sql = "INSERT INTO Location_success_rate (location_id, success_rate) VALUES ({}, NULL);".format(lid)
+        else:
             LocationSuccesRate = successful / total
-            INS_cursor.execute("""INSERT INTO Location_success_rate (location_id, success_rate)VALUES (%s, %s);""", (lid, LocationSuccesRate))
-            conn.commit()
+            sql = "INSERT INTO Location_success_rate (location_id, success_rate) VALUES ({}, {});".format(lid, LocationSuccesRate)
+        INS_cursor.execute(sql)
+        conn.commit()
 
-Insert_RocketSuccesRate(conn)
-Insert_CompanySuccesRate(conn)
-Insert_LocationSuccesRate(conn)
+# def Update_RocketSuccesRate(conn, rocket_id): 
+#     MID_cursor = conn.cursor()
+#     INS_cursor = conn.cursor()
+#     MID_cursor.execute("SELECT COUNT(succesful) FROM Missions WHERE rocket_id = %s AND succesful = TRUE", (rocket_id,))
+#     successful_mission_rows = MID_cursor.fetchone()
+#     successful = successful_mission_rows[0]
+#     MID_cursor.execute("SELECT COUNT(succesful) FROM Missions WHERE rocket_id = %s", (rocket_id,))
+#     total_mission_rows = MID_cursor.fetchone()
+#     total = total_mission_rows[0]
+
+
+
+
+def Insert_SuccesRates(conn):
+    Insert_RocketSuccesRate(conn)
+    Insert_CompanySuccesRate(conn)
+    Insert_LocationSuccesRate(conn)
+
+Insert_SuccesRates(conn)

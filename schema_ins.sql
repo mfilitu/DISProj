@@ -98,7 +98,7 @@ INSERT INTO rockets(rocket_name, active) VALUES ('Zenit-2', false);
 
 -- NASA rockets
 INSERT INTO rockets(rocket_name, active) VALUES ('Ares 1-X', false);
-INSERT INTO rockets(rocket_name, active) VALUES ('Atlas-D', false);
+INSERT INTO rockets(rocket_name, active) VALUES ('Atlas-D Mercury', false);
 INSERT INTO rockets(rocket_name, active) VALUES ('Blue Scout II', false);
 INSERT INTO rockets(rocket_name, active) VALUES ('Mercury-Redstone', false);
 INSERT INTO rockets(rocket_name, active) VALUES ('Saturn I', false);
@@ -212,50 +212,50 @@ INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, locati
 VALUES ('1984-04-17', true, 59.0,
     (SELECT id from rockets where rocket_name = 'Titan III'),
     (SELECT id from companies where company_name = 'US Air Force'),
-    (SELECT id from locations where location_name = 'Vanenber AFB, CA, USA'));
+    (SELECT id from locations where location_name = 'Vanenber AFB'));
 
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1963-09-27', false, NULL,
     (SELECT id from rockets where rocket_name = 'Scout X'),
     (SELECT id from companies where company_name = 'US Air Force'),
-    (SELECT id from locations where location_name = 'Vanenber AFB, CA, USA'));
+    (SELECT id from locations where location_name = 'Vanenber AFB'));
 
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1962-10-27', true, NULL,
     (SELECT id from rockets where rocket_name = 'Delta'),
     (SELECT id from companies where company_name = 'US Air Force'),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, FL, USA'));
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1960-10-27', false, NULL,
     (SELECT id from rockets where rocket_name = 'Thor DM-21'),
     (SELECT id from companies where company_name = 'US Air Force'),
-    (SELECT id from locations where location_name = 'Vandenberg AFB, CA, USA'));
+    (SELECT id from locations where location_name = 'Vandenberg AFB'));
 
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1962-05-24', false, NULL,
     (SELECT id from rockets where rocket_name = 'Scout X-2M'),
     (SELECT id from companies where company_name = 'US Air Force'),
-    (SELECT id from locations where location_name = 'Vanenber AFB, CA, USA'));
+    (SELECT id from locations where location_name = 'Vanenber AFB'));
 
 
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1960-11-23', true, NULL,
     (SELECT id from rockets where rocket_name = 'Thor DM-19'),
     (SELECT id from companies where company_name = 'US Air Force'),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, FL, USA'));
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1960-08-12', true, NULL,
     (SELECT id from rockets where rocket_name = 'Thor DM-18'),
     (SELECT id from companies where company_name = 'US Air Force'),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, FL, USA'));
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1958-12-18', true, NULL,
     (SELECT id from rockets where rocket_name = 'SM-65B Atlas'),
     (SELECT id from companies where company_name = 'US Air Force'),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, FL, USA'));
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 -- RVSN USSR Missions
 -- Cosmos-1
@@ -263,175 +263,175 @@ INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, locati
 VALUES ('1965-12-28', true, NULL,
     (SELECT id from rockets where rocket_name = 'Cosmos-1'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Cosmos-2I
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1962-10-25', false, NULL,
     (SELECT id from rockets where rocket_name = 'Cosmos-2I'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Kapustin Yar, Russian Federation'));
+    (SELECT id from locations where location_name = 'Kapustin Yar'));
 
 -- Cosmos-3
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1966-11-16', true, NULL,
     (SELECT id from rockets where rocket_name = 'Cosmos-3'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 --Cosmos-3M
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1971-12-27', true, NULL,
     (SELECT id from rockets where rocket_name = 'Cosmos-3M'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Plesetsk Cosmodrome, Russian Federation'));
+    (SELECT id from locations where location_name = 'Plesetsk Cosmodrome'));
 
 -- Cosmos-3MRB
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1970-07-31', true, NULL,
     (SELECT id from rockets where rocket_name = 'Cosmos-3MRB'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Kapustin Yar, Russian Federation'));
+    (SELECT id from locations where location_name = 'Kapustin Yar'));
 
 -- Energiya/Buran
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1988-11-15', true, 5000.0,
     (SELECT id from rockets where rocket_name = 'Energiya/Buran'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Energiya/Polyus
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1987-05-15', true, 5000.0,
     (SELECT id from rockets where rocket_name = 'Energiya/Polyus'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Molniya
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1960-10-10', false, NULL,
     (SELECT id from rockets where rocket_name = 'Molniya'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Molniya-M
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1978-06-28', true, NULL,
     (SELECT id from rockets where rocket_name = 'Molniya-M'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Plesetsk Cosmodrome, Russian Federation'));
+    (SELECT id from locations where location_name = 'Plesetsk Cosmodrome'));
 
 -- N1-L3
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1969-02-21', false, NULL,
     (SELECT id from rockets where rocket_name = 'N1-L3'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Poliot
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1963-11-01', true, NULL,
     (SELECT id from rockets where rocket_name = 'Poliot'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Proton K
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1965-10-22', false, NULL,
     (SELECT id from rockets where rocket_name = 'Proton K'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Soyuz
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1966-11-28', true, NULL,
     (SELECT id from rockets where rocket_name = 'Soyuz'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Soyuz L
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1970-11-24', true, NULL,
     (SELECT id from rockets where rocket_name = 'Soyuz L'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Soyuz M
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1971-12-27', false, NULL,
     (SELECT id from rockets where rocket_name = 'Soyuz M'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Plesetsk Cosmodrome, Russian Federation'));
+    (SELECT id from locations where location_name = 'Plesetsk Cosmodrome'));
 
 -- Soyuz U
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1978-04-06', true, NULL,
     (SELECT id from rockets where rocket_name = 'Soyuz U'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Sputnik
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1957-04-27', false, NULL,
     (SELECT id from rockets where rocket_name = 'Sputnik'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Tsyklon
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1967-01-25', true, NULL,
     (SELECT id from rockets where rocket_name = 'Tsyklon'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Tsyklon-2
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1979-04-25', true, NULL,
     (SELECT id from rockets where rocket_name = 'Tsyklon-2'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Tsyklon-2A
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1968-04-24', false, NULL,
     (SELECT id from rockets where rocket_name = 'Tsyklon-2A'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Tsyklon-3
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1981-01-23', false, NULL,
     (SELECT id from rockets where rocket_name = 'Tsyklon-3'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Plesetsk Cosmodrome, Russian Federation'));
+    (SELECT id from locations where location_name = 'Plesetsk Cosmodrome'));
 
 -- Voskhod
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1966-11-12', true, NULL,
     (SELECT id from rockets where rocket_name = 'Voskhod'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Plesetsk Cosmodrome, Russian Federation'));
+    (SELECT id from locations where location_name = 'Plesetsk Cosmodrome'));
 
 -- Vostok-2
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1966-01-07', false, NULL,
     (SELECT id from rockets where rocket_name = 'Vostok-2'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Vostok-2M
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1965-12-17', true, NULL,
     (SELECT id from rockets where rocket_name = 'Vostok-2M'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Zenit-2
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1991-08-30', false, NULL,
     (SELECT id from rockets where rocket_name = 'Zenit-2'),
     (SELECT id from companies where company_name = 'RVSN USSR'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- NASA Missions
 -- Ares 1-X
@@ -439,126 +439,126 @@ INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, locati
 VALUES ('2009-10-28', true, 450.0,
     (SELECT id from rockets where rocket_name = 'Ares 1-X'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Kennedy Space Center, Florida, USA'));
+    (SELECT id from locations where location_name = 'Kennedy Space Center'));
 
 -- Atlas-D
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1962-05-24', true, NULL,
-    (SELECT id from rockets where rocket_name = 'Atlas-D' LIMIT 1),
-    (SELECT id from companies where company_name = 'NASA' LIMIT 1),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, Florida, USA' LIMIT 1));
+    (SELECT id from rockets where rocket_name = 'Atlas-D Mercury'),
+    (SELECT id from companies where company_name = 'NASA'),
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 -- Blue Scout II
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1961-11-01', false, NULL,
     (SELECT id from rockets where rocket_name = 'Blue Scout II'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, Florida, USA'));
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 -- Mercury-Redstone
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1961-05-05', true, NULL,
     (SELECT id from rockets where rocket_name = 'Mercury-Redstone'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, Florida, USA'));
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 -- Saturn I
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1964-05-28', true, NULL,
     (SELECT id from rockets where rocket_name = 'Saturn I'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, Florida, USA'));
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 -- Saturn IB
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1966-01-27', false, NULL,
     (SELECT id from rockets where rocket_name = 'Saturn IB'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, Florida, USA'));
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 -- Saturn V
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1967-11-09', true, 1160.0,
     (SELECT id from rockets where rocket_name = 'Saturn V'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Kennedy Space Center, Florida, USA'));
+    (SELECT id from locations where location_name = 'Kennedy Space Center'));
 
 -- Scout X-1
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1960-12-04', false, NULL,
     (SELECT id from rockets where rocket_name = 'Scout X-1'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Wallops Flight Facility, Virginia, USA'));
+    (SELECT id from locations where location_name = 'Wallops Flight Facility'));
 
 -- Scout X-2
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1961-04-26', false, NULL,
     (SELECT id from rockets where rocket_name = 'Scout X-2'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Wallops Flight Facility, Virginia, USA'));
+    (SELECT id from locations where location_name = 'Wallops Flight Facility'));
 
 -- Scout X-3
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1961-12-16', true, NULL,
     (SELECT id from rockets where rocket_name = 'Scout X-3'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Wallops Flight Facility, Virginia, USA'));
+    (SELECT id from locations where location_name = 'Wallops Flight Facility'));
 
 -- Scout X-4
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1962-12-19', true, NULL,
     (SELECT id from rockets where rocket_name = 'Scout X-4'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Vandenbergh AFB, California, USA'));
+    (SELECT id from locations where location_name = 'Vandenbergh AFB'));
 
 -- Space Shuttle Atlantis
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1985-10-03', true, 450.0,
     (SELECT id from rockets where rocket_name = 'Space Shuttle Atlantis'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Kennedy Space Center, Florida, USA'));
+    (SELECT id from locations where location_name = 'Kennedy Space Center'));
 
 -- Space Shuttle Challenger
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1986-01-28', false, 450.0,
     (SELECT id from rockets where rocket_name = 'Space Shuttle Challenger'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Kennedy Space Center, Florida, USA'));
+    (SELECT id from locations where location_name = 'Kennedy Space Center'));
 
 -- Space Shuttle Columbia
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1981-03-08', true, 450.0,
     (SELECT id from rockets where rocket_name = 'Space Shuttle Columbia'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Kennedy Space Center, Florida, USA'));
+    (SELECT id from locations where location_name = 'Kennedy Space Center'));
 
 -- Space Shuttle Discovery
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1984-08-30', true, 450.0,
     (SELECT id from rockets where rocket_name = 'Space Shuttle Discovery'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Kennedy Space Center, Florida, USA'));
+    (SELECT id from locations where location_name = 'Kennedy Space Center'));
 
 -- Space Shuttle Endeavour
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1992-05-07', true, 450.0,
     (SELECT id from rockets where rocket_name = 'Space Shuttle Endeavour'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Kennedy Space Center, Florida, USA'));
+    (SELECT id from locations where location_name = 'Kennedy Space Center'));
 
 -- Thor-DM 18 Able I
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1958-11-08', false, NULL,
     (SELECT id from rockets where rocket_name = 'Thor-DM 18 Able I'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, Florida, USA'));
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 -- Titan II GLV
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1966-06-03', false, NULL,
     (SELECT id from rockets where rocket_name = 'Titan II GLV'),
     (SELECT id from companies where company_name = 'NASA'),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS, Florida, USA'));
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 
 
 -- Arianespace Missions
@@ -567,126 +567,126 @@ INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, locati
 VALUES ('1985-07-02', true, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 1'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 2
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1986-05-31', false, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 2'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 3
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1984-08-04', true, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 3'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 40
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1991-07-17', true, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 40'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 42L
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1995-10-19', true, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 42L'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 42P
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1994-12-01', false, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 42P'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 44L
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1990-02-22', false, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 44L'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 44LP
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1998-09-16', true, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 44LP'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 44P
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2001-01-10', true, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 44P'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 5 ECA
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2002-12-11', false, 200.0,
     (SELECT id from rockets where rocket_name = 'Ariane 5 ECA'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 5 ES
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2013-06-05', true, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 5 ES'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 5 G
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2005-10-13', true, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 5 G'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 5 G+
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2004-12-18', true, 190.0,
     (SELECT id from rockets where rocket_name = 'Ariane 5 G+'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Ariane 5 GS
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2009-12-18', true, NULL,
     (SELECT id from rockets where rocket_name = 'Ariane 5 GS'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Soyuz 2.1b/Fregat
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2020-02-06', true, 48.5,
     (SELECT id from rockets where rocket_name = 'Soyuz 2.1b/Fregat'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Baikonur Cosmodrome, Republic of Kazakhstan'));
+    (SELECT id from locations where location_name = 'Baikonur Cosmodrome'));
 
 -- Soyuz ST-A/Fregat
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2012-12-02', true, 80.0,
     (SELECT id from rockets where rocket_name = 'Soyuz ST-A/Fregat'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Soyuz ST-B/Fregat-M
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2018-11-07', true, NULL,
     (SELECT id from rockets where rocket_name = 'Soyuz ST-B/Fregat-M'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 -- Vega
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('2019-07-11', false, 37.0,
     (SELECT id from rockets where rocket_name = 'Vega'),
     (SELECT id from companies where company_name = 'Arianespace'),
-    (SELECT id from locations where location_name = 'Guiana Space Centre, French Guiana, France'));
+    (SELECT id from locations where location_name = 'Guiana Space Centre'));
 
 
 -- Boeing missions
@@ -859,14 +859,14 @@ VALUES ('1990-07-25', true, NULL,
 
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1959-11-26', false, NULL, 
-    (SELECT id from rockets where rocket_name = 'Atlas-D' LIMIT 1),
-    (SELECT id from companies where company_name = 'General Dynamics' LIMIT 1),
-    (SELECT id from locations where location_name = 'Cape Canaveral AFS' LIMIT 1));
+    (SELECT id from rockets where rocket_name = 'Atlas-D'),
+    (SELECT id from companies where company_name = 'General Dynamics'),
+    (SELECT id from locations where location_name = 'Cape Canaveral AFS'));
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1966-12-11', true, NULL, 
-    (SELECT id from rockets where rocket_name = 'Atlas-D' LIMIT 1),
-    (SELECT id from companies where company_name = 'General Dynamics' LIMIT 1),
-    (SELECT id from locations where location_name = 'Vandenberg AFB' LIMIT 1));
+    (SELECT id from rockets where rocket_name = 'Atlas-D'),
+    (SELECT id from companies where company_name = 'General Dynamics'),
+    (SELECT id from locations where location_name = 'Vandenberg AFB'));
 
 INSERT INTO Missions(launch_data, succesful, cost, rocket_id, company_id, location_id)
 VALUES ('1992-02-11', true, NULL, 
