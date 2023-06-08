@@ -1,6 +1,6 @@
 import psycopg2
 import numpy as np
-conn = psycopg2.connect("dbname=distest user=postgres password=postgres")
+conn = psycopg2.connect("dbname=distest user=postgres password=1074")
 
 def Insert_RocketSuccesRate(conn): 
     RID_cursor = conn.cursor()
