@@ -916,375 +916,375 @@ VALUES ('2016-02-07', true, NULL,
 -- SpaceX
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Falcon 1'),
-    (SELECT id FROM Companies WHERE name = 'SpaceX')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Falcon 1'),
+    (SELECT id FROM Companies WHERE company_name = 'SpaceX')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Falcon Heavy'),
-    (SELECT id FROM Companies WHERE name = 'SpaceX')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Falcon Heavy'),
+    (SELECT id FROM Companies WHERE company_name = 'SpaceX')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Falcon 9'),
-    (SELECT id FROM Companies WHERE name = 'SpaceX')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Falcon 9'),
+    (SELECT id FROM Companies WHERE company_name = 'SpaceX')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Starship Prototype'),
-    (SELECT id FROM Companies WHERE name = 'SpaceX')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Starship Prototype'),
+    (SELECT id FROM Companies WHERE company_name = 'SpaceX')
 );
 -- US Air Force
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'SM-65B Atlas'),
-    (SELECT id FROM Companies WHERE name = 'US Air Force')
+    (SELECT id FROM Rockets WHERE rocket_name = 'SM-65B Atlas'),
+    (SELECT id FROM Companies WHERE company_name = 'US Air Force')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Thor DM-18'),
-    (SELECT id FROM Companies WHERE name = 'US Air Force')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Thor DM-18'),
+    (SELECT id FROM Companies WHERE company_name = 'US Air Force')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Thor DM-19'),
-    (SELECT id FROM Companies WHERE name = 'US Air Force')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Thor DM-19'),
+    (SELECT id FROM Companies WHERE company_name = 'US Air Force')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Thor DM-21'),
-    (SELECT id FROM Companies WHERE name = 'US Air Force')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Thor DM-21'),
+    (SELECT id FROM Companies WHERE company_name = 'US Air Force')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Scout X'),
-    (SELECT id FROM Companies WHERE name = 'US Air Force')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Scout X'),
+    (SELECT id FROM Companies WHERE company_name = 'US Air Force')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Delta'),
-    (SELECT id FROM Companies WHERE name = 'US Air Force')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Delta'),
+    (SELECT id FROM Companies WHERE company_name = 'US Air Force')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Titan III'),
-    (SELECT id FROM Companies WHERE name = 'US Air Force')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Titan III'),
+    (SELECT id FROM Companies WHERE company_name = 'US Air Force')
 );
 -- RVSN USSR
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Cosmos-1'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Cosmos-1'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Cosmos-2I'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Cosmos-2I'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Cosmos-3'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Cosmos-3'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Cosmos-3M'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Cosmos-3M'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Cosmos-3MRB'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Cosmos-3MRB'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Energiya/Buran'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Energiya/Buran'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Energiya/Polyus'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Energiya/Polyus'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Molniya'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Molniya'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Molniya-M'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Molniya-M'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'N1-L3'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'N1-L3'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Poliot'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Poliot'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Proton K'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Proton K'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Soyuz'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Soyuz'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Soyuz L'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Soyuz L'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Soyuz M'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Soyuz M'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Soyuz U'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Soyuz U'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Sputnik'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Sputnik'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Tsyklon'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Tsyklon'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Tsyklon-2'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Tsyklon-2'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Tsyklon-2A'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Tsyklon-2A'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Tsyklon-3'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Tsyklon-3'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Voskhod'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Voskhod'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Voskhod-2'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Vostok-2'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Voskhod-2M'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Vostok-2M'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Zenit-2'),
-    (SELECT id FROM Companies WHERE name = 'RVSN USSR')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Zenit-2'),
+    (SELECT id FROM Companies WHERE company_name = 'RVSN USSR')
 );
 
 -- Arianespace
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 1'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 1'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 2'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 2'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 3'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 3'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 40'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 40'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 42L'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 42L'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 42P'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 42P'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 44L'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 44L'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 44LP'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 44LP'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 44P'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 44P'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 5 ECA'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 5 ECA'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 5 ES'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 5 ES'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 5 G'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 5 G'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 5 G+'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 5 G+'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Ariane 5 GS'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ariane 5 GS'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Soyuz 2.1b/Fregat'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Soyuz 2.1b/Fregat'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Soyuz ST-A/Fregat'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Soyuz ST-A/Fregat'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Soyuz ST-B/Fregat-M'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Soyuz ST-B/Fregat-M'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Vega'),
-    (SELECT id FROM Companies WHERE name = 'Arianespace')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Vega'),
+    (SELECT id FROM Companies WHERE company_name = 'Arianespace')
 );
 -- Boeing 
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Delta II'),
-    (SELECT id FROM Companies WHERE name = 'Boeing')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Delta II'),
+    (SELECT id FROM Companies WHERE company_name = 'Boeing')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Delta III'),
-    (SELECT id FROM Companies WHERE name = 'Boeing')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Delta III'),
+    (SELECT id FROM Companies WHERE company_name = 'Boeing')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Delta IV'),
-    (SELECT id FROM Companies WHERE name = 'Boeing')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Delta IV'),
+    (SELECT id FROM Companies WHERE company_name = 'Boeing')
 );
 -- Blue Origin
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'New Shepard'),
-    (SELECT id FROM Companies WHERE name = 'Blue Origin')
+    (SELECT id FROM Rockets WHERE rocket_name = 'New Shepard'),
+    (SELECT id FROM Companies WHERE company_name = 'Blue Origin')
 );
 -- CASC 
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Fang Bao 1'),
-    (SELECT id FROM Companies WHERE name = 'CASC')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Fang Bao 1'),
+    (SELECT id FROM Companies WHERE company_name = 'CASC')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Jielong-1'),
-    (SELECT id FROM Companies WHERE name = 'CASC')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Jielong-1'),
+    (SELECT id FROM Companies WHERE company_name = 'CASC')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Long March 1'),
-    (SELECT id FROM Companies WHERE name = 'CASC')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Long March 1'),
+    (SELECT id FROM Companies WHERE company_name = 'CASC')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Long March 2'),
-    (SELECT id FROM Companies WHERE name = 'CASC')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Long March 2'),
+    (SELECT id FROM Companies WHERE company_name = 'CASC')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Long March 11'),
-    (SELECT id FROM Companies WHERE name = 'CASC')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Long March 11'),
+    (SELECT id FROM Companies WHERE company_name = 'CASC')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Long March 3'),
-    (SELECT id FROM Companies WHERE name = 'CASC')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Long March 3'),
+    (SELECT id FROM Companies WHERE company_name = 'CASC')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Long March 5'),
-    (SELECT id FROM Companies WHERE name = 'CASC')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Long March 5'),
+    (SELECT id FROM Companies WHERE company_name = 'CASC')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Long March 6'),
-    (SELECT id FROM Companies WHERE name = 'CASC')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Long March 6'),
+    (SELECT id FROM Companies WHERE company_name = 'CASC')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Long March 7'),
-    (SELECT id FROM Companies WHERE name = 'CASC')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Long March 7'),
+    (SELECT id FROM Companies WHERE company_name = 'CASC')
 );
 -- General Dynamics
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Atlas-D'),
-    (SELECT id FROM Companies WHERE name = 'General Dynamics')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Atlas-D'),
+    (SELECT id FROM Companies WHERE company_name = 'General Dynamics')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Atlas-SLV3'),
-    (SELECT id FROM Companies WHERE name = 'General Dynamics')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Atlas-SLV3'),
+    (SELECT id FROM Companies WHERE company_name = 'General Dynamics')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Atlas I'),
-    (SELECT id FROM Companies WHERE name = 'General Dynamics')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Atlas I'),
+    (SELECT id FROM Companies WHERE company_name = 'General Dynamics')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Atlas II'),
-    (SELECT id FROM Companies WHERE name = 'General Dynamics')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Atlas II'),
+    (SELECT id FROM Companies WHERE company_name = 'General Dynamics')
 );
 -- KCST
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Taepodong'),
-    (SELECT id FROM Companies WHERE name = 'KCST')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Taepodong'),
+    (SELECT id FROM Companies WHERE company_name = 'KCST')
 );
 INSERT INTO Produces (rocket_id, company_id)
 VALUES (
-    (SELECT id FROM Rockets WHERE name = 'Unha'),
-    (SELECT id FROM Companies WHERE name = 'KCST')
+    (SELECT id FROM Rockets WHERE rocket_name = 'Unha'),
+    (SELECT id FROM Companies WHERE company_name = 'KCST')
 );

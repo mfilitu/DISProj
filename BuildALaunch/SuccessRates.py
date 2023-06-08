@@ -1,3 +1,4 @@
+
 def Insert_RocketSuccesRate(conn):
     """
     Calulates and inserts the success rate of each rocket in the database.
@@ -131,7 +132,7 @@ def Update_RocketSuccesRate(conn, rocket_id):
 
     Returns:
         None
-    """
+    """ 
     MID_cursor = conn.cursor()
     INS_cursor = conn.cursor()
 
