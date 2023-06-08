@@ -1,6 +1,3 @@
-import psycopg2
-conn = psycopg2.connect("dbname=distest user=postgres password=postgres")
-
 def Insert_RocketSuccesRate(conn):
     """
     Calulates and inserts the success rate of each rocket in the database.

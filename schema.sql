@@ -50,3 +50,11 @@ CREATE TABLE IF NOT EXISTS Rocket_success_rate (
     PRIMARY KEY (rocket_id),
     FOREIGN KEY (rocket_id) REFERENCES Rockets(id)
 );
+
+CREATE TABLE IF NOT EXISTS Produces (
+    rocket_id INTEGER,
+    company_id INTEGER,
+    PRIMARY KEY (rocket_id),
+    FOREIGN KEY (company_id) REFERENCES Companies(id),
+    FOREIGN KEY (rocket_id) REFERENCES Rockets(id)
+);
