@@ -32,21 +32,21 @@ CREATE TABLE IF NOT EXISTS Missions(
 
 CREATE TABLE IF NOT EXISTS Company_success_rate (
     company_id INTEGER,
-    success_rate DOUBLE PRECISION,
+    success_rate NUMERIC(3, 2),
     PRIMARY KEY (company_id),
     FOREIGN KEY (company_id) REFERENCES Companies(id)
 );
 
 CREATE TABLE IF NOT EXISTS Location_success_rate (
     location_id INTEGER,
-    success_rate DOUBLE PRECISION,
+    success_rate NUMERIC(3, 2),
     PRIMARY KEY (location_id),
     FOREIGN KEY (location_id) REFERENCES Locations(id)
 );
 
 CREATE TABLE IF NOT EXISTS Rocket_success_rate (
     rocket_id INTEGER,
-    success_rate DOUBLE PRECISION,
+    success_rate NUMERIC(3, 2),
     PRIMARY KEY (rocket_id),
     FOREIGN KEY (rocket_id) REFERENCES Rockets(id)
 );

@@ -21,15 +21,15 @@ def home():
 
 @app.route('/companies')
 def companies():
-	companies = get_company_name(conn)
+	companies = get_company_info(conn)
 	
 	return render_template('companies.html', companies=companies)
 
 @app.route('/rockets', methods=['POST', 'GET'])
 def rockets():
-	
+	company = request.args.get('company')
 	rockets = get_rockets_by_company(conn)
-	return render_template('rockets.html', rockets=rockets)
+	return render_template('rockets.html', rockets=rockets, company=company)
 
 @app.route('/locations', methods=['POST', 'GET'])
 def location():
@@ -37,9 +37,14 @@ def location():
 	return render_template('locations.html', locations=locations)
 
 
-def get_company_name(conn):
+def get_company_info(conn):
 	cur = conn.cursor()
-	cur.execute("SELECT company_name FROM Companies;")
+	cur.execute("""SELECT companies.company_name, COUNT(*) AS mission_count, company_success_rate.success_rate
+				   FROM companies
+				   JOIN missions on companies.id = missions.company_id
+				   JOIN company_success_rate on companies.id = company_success_rate.company_id
+				   GROUP BY companies.company_name, companies.id, company_success_rate.success_rate;
+				   """)
 	companies = cur.fetchall()
 	return companies
 
