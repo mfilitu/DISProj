@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build A Launch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='launch.css') }}">
+</head>
+<body>  
+    <div>
+        <button type="button" onclick="window.location.href='/launch';">Launch Your Rocket!!!</button>
+    </div>
+    
+    <p>Selected Country: {{ country }}</p>
+    <p>Selected Rocket: {{ rocket }}</p>
+    <p>Selected Company: {{ company }}</p>
+    <p>Selected Location: {{ location }}</p>
+</body>
+</html>
