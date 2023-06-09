@@ -3,7 +3,7 @@ DELETE FROM companies;
 DELETE FROM locations;
 DELETE FROM missions;
 -- DATA FROM https://www.kaggle.com/datasets/agirlcoding/all-space-missions-from-1957
--- We picked 11 companies from the dataset
+-- We picked 10 companies from the dataset
 -- ====================================================================================================
 --                                      COMPANIES
 -- ====================================================================================================
