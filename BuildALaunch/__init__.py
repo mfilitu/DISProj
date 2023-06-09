@@ -73,6 +73,6 @@ def get_locations(conn):
 
 def get_country(conn):
 	cur = conn.cursor()
-	cur.execute("SELECT country FROM Locations;")
+	cur.execute("SELECT DISTINCT country FROM Locations;")
 	countries = cur.fetchall()
 	return countries
