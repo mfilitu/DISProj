@@ -24,7 +24,7 @@
     {% for i in range (2)%}
     <div class="wrapper">
         {% for j in range(companies|length// 2)%}
-        <a href="/rockets?company={{companies[j+(companies|length//2)*i][0]}}" class="no-underline">
+        <a href="/rockets?cid={{companies[j+(companies|length//2)*i][3]}}" class="no-underline">
             <div class="smallContainer"> 
                 <p class="companyName">
                     <b>{{ companies[j+(companies|length//2)*i][0] }}</b> <br>
