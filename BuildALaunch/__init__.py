@@ -21,19 +21,24 @@ def home():
 
 @app.route('/companies', methods=['POST', 'GET'])
 def companies():
-	companies = get_company_name(conn)
+	companies = get_company_info(conn)
 	return render_template('companies.html', companies=companies)
 
 @app.route('/rockets', methods=['POST', 'GET'])
 def rockets():
-	
-	rockets = get_rockets_by_company(conn)
-	return render_template('rockets.html', rockets=rockets)
+	cid = request.args.get('cid')
+	rocketInfo = get_rocket_info(conn)
+	companies = get_companies_id(conn)
+	return render_template('rockets.html', rocketInfo=rocketInfo, cid=cid, companies=companies)
 
 @app.route('/locations', methods=['POST', 'GET'])
 def location():
-	locations = get_locations(conn)
-	return render_template('locations.html', locations=locations)
+	cid = request.args.get('cid')
+	rid = request.args.get('rid')
+	in_company = request.args.get('rocket')
+	locations = get_location(conn)
+	return render_template('locations.html', locations=locations, cid=cid, rid=rid)
+
 
 @app.route('/countries', methods=['POST', 'GET'])
 def countries():
@@ -53,15 +58,30 @@ def launch():
     return render_template('launch.html', country=country, rocket=rocket, company=company, location=location)
 
 
-def get_company_name(conn):
+def get_company_info(conn):
 	cur = conn.cursor()
-	cur.execute("SELECT company_name FROM Companies;")
+	cur.execute("""SELECT companies.company_name, COUNT(*) AS mission_count,
+	 			   company_success_rate.success_rate, companies.id
+				   FROM companies
+				   JOIN missions on companies.id = missions.company_id
+				   JOIN company_success_rate on companies.id = company_success_rate.company_id
+				   GROUP BY companies.company_name, companies.id, company_success_rate.success_rate;
+				   """)
 	companies = cur.fetchall()
 	return companies
 
-def get_rockets_by_company(conn):
+def get_companies_id(conn):
 	cur = conn.cursor()
-	cur.execute("SELECT rocket_name FROM Rockets;")
+	cur.execute("""SELECT company_name, id FROM companies""")
+	return cur.fetchall()
+
+def get_rocket_info(conn):
+	cur = conn.cursor()
+	cur.execute("""SELECT companies.id, rocket_name, success_rate, rockets.id FROM Rockets
+					JOIN produces ON produces.rocket_id = rockets.id
+					JOIN companies ON produces.company_id = companies.id 
+					JOIN rocket_success_rate ON rockets.id = rocket_success_rate.rocket_id
+					""")
 	rockets = cur.fetchall()
 	return rockets
 

@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Build A Launch</title>
+    <title>DISTEST</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homeStyle.css') }}">
+    <style>
+        optgroup {
+            font-weight: bold;
+            color: rgb(184, 15, 10);
+            border-bottom: 2px solid black ;
+        }
+    </style>
 </head>
 <body>
     <h1>Rockets</h1>
 
-    <form action="/launch" method="POST">
+    <form action="/locations" method="GET">
         <label for="rocket">Select a rocket:</label>
-        <select name="rocket" id="rocket">
-            {% for rocket in rockets %}
-                <option value="{{ rocket }}">{{ rocket[0] }}</option>
+        <select name="rid" id="rocket" required size = 10>
+            {% for company in companies%}
+                <optgroup label="{{ company[0] }}"></optgroup>
+                {% for rocket in rocketInfo %}
+                    {% if company[1] == rocket[0]%}
+                    <option value="{{ rocket[3] }}">{{ rocket[1] }}</option>
+                    {% endif %}
+                {% endfor %}
             {% endfor %}
         </select>
         <br><br>
-        <input type="submit" value="Submit">
+        <input type="hidden"  value="{{ cid }}" name="cid">
+        <input type="submit" value="Select Rocket" class="homeButton">
     </form>
 </body>
 </html>
