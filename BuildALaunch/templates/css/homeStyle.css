@@ -24,11 +24,6 @@ body {
     display: flex;
     justify-content: center;
 }
-.wrapper2 {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
 .overlay {
     border: 5px solid gray;
     color: black;

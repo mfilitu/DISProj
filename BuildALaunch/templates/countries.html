@@ -16,23 +16,19 @@
     } %}
     <h1>Countries</h1>
     <!-- Displaying flags that are clickable-->
-    <div class="wrapper2">
+    <div class="wrapper">
         {% for i in range (countries|length) %}
             
-                <a href="/locations?cid={{ i }}" class="no-underline">
-                    <div class="overlay">
-                        <img src="{{ flags[countries[i][0]] }}" alt="Flag" class="image" style="width: 60%;">
-                        <p class="text">
-                            <b>{{ countries[i][0] }}</b>
-                        </p>
+            <a href="/locations?cid={{ i }}" class="no-underline">
+                <div class="overlay">
+                    <img src="{{ flags[countries[i][0]] }}" alt="Flag" class="image" style="width: 60%;">
+                    <p class="text">
+                        <b>{{ countries[i][0] }}</b>
+                    </p>
                         
 
-                    </div>
-                </a>
-                
-
-            
-        
+                </div>
+            </a>
         {% endfor %}
     </div>
     

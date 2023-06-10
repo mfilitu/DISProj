@@ -39,34 +39,63 @@ def rockets():
 	companies = get_companies_id(conn)
 	return render_template('rockets.html', rocketInfo=rocketInfo, cid=cid, companies=companies)
 
+# Countries page of the website where the user can choose a country
+@app.route('/countries', methods=['POST', 'GET'])
+def countries():
+	cid = request.args.get('cid')
+	rid = request.args.get('rid')
+	countries = get_country(conn)
+	return render_template('countries.html', countries=countries, cid=cid, rid=rid)
+
 # Locations page of the website where the user can choose a location
 @app.route('/locations', methods=['POST', 'GET'])
 def location():
 	cid = request.args.get('cid')
 	rid = request.args.get('rid')
-	in_company = request.args.get('rocket')
 	locations = get_location(conn)
 	countries = get_country(conn)
 	return render_template('locations.html', locations=locations, countries=countries, cid=cid, rid=rid)
 
-# Countries page of the website where the user can choose a country
-@app.route('/countries', methods=['POST', 'GET'])
-def countries():
-	countries = get_country(conn)
-	if request.method == 'POST':
-		selected_country = request.form.get('country')
-		return render_template('countries.html', countries=countries, country1=selected_country)
-	return render_template('countries.html', countries=countries)
+
 
 # Launch page of the website where the user can see the launch information and the success rate
 @app.route('/launch', methods=['POST', 'GET'])
 def launch():
-    country = request.form.get('country')
-    rocket = request.form.get('rocket')
-    company = request.form.get('company')
-    location = request.form.get('location')
+	cid = request.args.get('cid')
+	rid = request.args.get('rid')
+	lid = request.args.get('lid')
+	cname, rname, lname = get_names(conn, cid, rid, lid)
+	# company = request.form.get('company')
+	# location = request.form.get('location')
     
-    return render_template('launch.html', country=country, rocket=rocket, company=company, location=location)
+	#rules of the launch
+	# 1 - if the rocket is from the same company then the success rate is + 10%
+	# 2 - if the rocket has been launched from the same location then the succ rate + 10%
+	# 3 - noise 0.98
+	
+	#successrate = success_rate()
+
+	return render_template('launch.html', cname=cname, rname=rname, lname=lname)
+
+# Fetches the cid, rid and lid of rocket, company and location
+def get_names(conn, cid, rid, lid):
+	cur = conn.cursor()
+	cur.execute(""" SELECT company_name 
+					FROM companies 
+					WHERE id = %s
+				""", (cid,))
+	cname = cur.fetchone()
+	cur.execute("""SELECT rocket_name
+					FROM rockets
+					WHERE id = %s
+				""", (rid,))
+	rname = cur.fetchone()
+	cur.execute(""" SELECT location_name 
+					FROM locations 
+					WHERE id = %s
+				""", (lid,))
+	lname = cur.fetchone()
+	return cname, rname, lname
 
 # This code gets the company name, the number of missions the company has, the company success rate,
 # and the company id from the companies table, missions table, and company_success_rate table.
@@ -105,7 +134,7 @@ def get_rocket_info(conn):
 # This code gets all the location names from the database and returns them as a list. 
 def get_location(conn):
 	cur = conn.cursor()
-	cur.execute("SELECT location_name FROM Locations;")
+	cur.execute("SELECT location_name, id FROM Locations;")
 	locations = cur.fetchall()
 	return locations
 

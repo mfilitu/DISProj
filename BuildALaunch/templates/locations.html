@@ -32,7 +32,7 @@
 
             <!-- Choosing a location based on the pre-selected country -->
             {% for location in locations %}
-                <option value="{{ location }}">{{ location }}</option>
+                <option value="{{ location[1] }}">{{ location[0] }}</option>
             {% endfor %}
         </select>
         <br><br>
