@@ -4,6 +4,10 @@
 <head>
     <title>Companies</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='homeStyle.css') }}">
+    <script>
+    function Select(element) {
+        element.style.borderColor = "red";
+    }</script>
 </head>
 <body>
     
@@ -25,8 +29,8 @@
     <div class="wrapper">
         {% for j in range(companies|length// 2)%}
         <a href="/rockets?cid={{companies[j+(companies|length//2)*i][3]}}" class="no-underline">
-            <div class="smallContainer"> 
-                <p class="companyName">
+            <div class="smallContainer" onclick="Select(this)"> 
+                <p class="nameHeader">
                     <b>{{ companies[j+(companies|length//2)*i][0] }}</b> <br>
                 </p>
                 <img src="{{ logos[companies[j+(companies|length//2)*i][0]] }}" alt="companies[j+(companies|length//2)*i][0]" style="width: 100%">
