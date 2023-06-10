@@ -44,17 +44,17 @@ def rockets():
 def countries():
 	cid = request.args.get('cid')
 	rid = request.args.get('rid')
-	countries = get_country(conn)
-	return render_template('countries.html', countries=countries, cid=cid, rid=rid)
+	countries = get_countries(conn)
+	locations = get_locations(conn)
+	return render_template('countries.html', countries=countries, locations=locations, cid=cid, rid=rid)
 
 # Locations page of the website where the user can choose a location
 @app.route('/locations', methods=['POST', 'GET'])
 def location():
 	cid = request.args.get('cid')
 	rid = request.args.get('rid')
-	locations = get_location(conn)
-	countries = get_country(conn)
-	return render_template('locations.html', locations=locations, countries=countries, cid=cid, rid=rid)
+	locations = get_locations(conn)
+	return render_template('locations.html', locations=locations, cid=cid, rid=rid)
 
 
 
@@ -132,14 +132,17 @@ def get_rocket_info(conn):
 	return rockets
 
 # This code gets all the location names from the database and returns them as a list. 
-def get_location(conn):
+def get_locations(conn):
 	cur = conn.cursor()
-	cur.execute("SELECT location_name, id FROM Locations;")
+	cur.execute("""SELECT locations.id, locations.country, locations.location_name, success_rate
+				   FROM locations
+				   JOIN location_success_rate 
+				   ON locations.id = location_success_rate.location_id;""")
 	locations = cur.fetchall()
 	return locations
 
 # This function returns all distinct countries in the Locations table.
-def get_country(conn):
+def get_countries(conn):
 	cur = conn.cursor()
 	cur.execute("SELECT DISTINCT country FROM Locations;")
 	countries = cur.fetchall()

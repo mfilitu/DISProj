@@ -3,6 +3,31 @@
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='homeStyle.css') }}">
     <title>Build A Launch</title>
+    <script>
+        var countryClicked;
+        function SelectCountry(element) {
+            // If there has already been a clicked element we reset the border to gray
+            // and hide its locations
+            if (countryClicked != null) {
+                countryClicked.style.borderColor = "gray";
+                var country = countryClicked.innerText;
+                var wrapper = document.getElementById(country);
+                var kids = wrapper.children;
+                for (let i = 0; i < kids.length; i++) {
+                kids[i].hidden = true;
+                }
+            }
+            element.style.borderColor = "red";
+            countryClicked = element;
+            // displaying locations only in the selected country
+            var country = element.innerText;
+            var wrapper = document.getElementById(country);
+            var kids = wrapper.children;
+            for (let i = 0; i < kids.length; i++) {
+                kids[i].hidden = false;
+            }
+        }
+    </script>
 </head>
 <body>
     {% set flags = {
@@ -18,21 +43,32 @@
     <!-- Displaying flags that are clickable-->
     <div class="wrapper">
         {% for i in range (countries|length) %}
-            
-            <a href="/locations?cid={{ i }}" class="no-underline">
-                <div class="overlay">
-                    <img src="{{ flags[countries[i][0]] }}" alt="Flag" class="image" style="width: 60%;">
+                <div class="countryBox" onclick="SelectCountry(this)">
+                    <img src="{{ flags[countries[i][0]] }}" alt="{{countries[i][0]}}" class="image" style="width: 50%;">
                     <p class="text">
                         <b>{{ countries[i][0] }}</b>
-                    </p>
-                        
-
+                    </p>    
                 </div>
             </a>
         {% endfor %}
     </div>
-    
-
+    <form action="/launch" method="GET">
+        {% for i in range (countries|length) %}
+            <div class="wrapper" id="{{ countries[i][0] }}">
+                {% for j in range (locations|length) %}
+                    {% if countries[i][0] == locations[j][1] %}
+                            <div class="locationContainer" hidden>
+                                <p class="nameHeader"> <b> {{ locations[j][2] }} </b> </p>
+                                <p class="succesRate"> Success rate {{ locations[j][3] }}</p> <br>
+                                <button type="submit" name="lid" value="{{ locations[j][0] }}">Pick this location</button>
+                            </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <input type="hidden"  value="{{ cid }}" name="cid">
+        <input type="hidden"  value="{{ rid }}" name="rid">
+    </form>
     
 </body>
 </html>

@@ -24,14 +24,15 @@ body {
     display: flex;
     justify-content: center;
 }
-.overlay {
+.countryBox {
     border: 5px solid gray;
     color: black;
     background-color: lightgrey;
     text-align: center;
-    height: 80px;
+    height: 100px;
     width:  100px;
     margin: 10px;
+    cursor: pointer;
 }
 .smallContainer {
     border: 5px solid gray;
@@ -52,12 +53,41 @@ body {
 a.no-underline {
     text-decoration: none;
 }
-.companyName {
+.nameHeader {
     color: rgb(184, 15, 10);
     font-family: Baskerville;
     font-size: 17px;
 }
-
+.locationContainer {
+    border: 5px solid gray;
+    color: black;
+    background-color: lightgrey;
+    text-align: center;
+    position: relative;
+    height: 150px;
+    width:  150px;
+    margin: 20px;
+}
+.locationContainer button {
+    height: 22 px;
+    width: 116 px;
+    position: absolute;
+    bottom: 3px;
+    right: 17.5px;
+    color: white;
+    border-radius: 5px;
+    background-color: green;
+    cursor: pointer;
+}
+.succesRate {
+    padding-bottom: 25px;
+    height: 28.5;
+    width: 138;
+    right: 6px;
+    left: 6px;
+    position: absolute;
+    bottom: 10px;
+}
 .rocketButton {
     display: flex;
     align-items: center;
