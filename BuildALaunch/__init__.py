@@ -19,9 +19,10 @@ conn = psycopg2.connect(db)
 def home():
     return render_template('home.html')
 
-@app.route('/companies', methods=['POST', 'GET'])
+@app.route('/companies')
 def companies():
 	companies = get_company_info(conn)
+	
 	return render_template('companies.html', companies=companies)
 
 @app.route('/rockets', methods=['POST', 'GET'])
@@ -38,24 +39,6 @@ def location():
 	in_company = request.args.get('rocket')
 	locations = get_location(conn)
 	return render_template('locations.html', locations=locations, cid=cid, rid=rid)
-
-
-@app.route('/countries', methods=['POST', 'GET'])
-def countries():
-	countries = get_country(conn)
-	if request.method == 'POST':
-		selected_country = request.form.get('country')
-		return render_template('countries.html', countries=countries, country1=selected_country)
-	return render_template('countries.html', countries=countries)
-
-@app.route('/launch', methods=['POST', 'GET'])
-def launch():
-    country = request.form.get('country')
-    rocket = request.form.get('rocket')
-    company = request.form.get('company')
-    location = request.form.get('location')
-    
-    return render_template('launch.html', country=country, rocket=rocket, company=company, location=location)
 
 
 def get_company_info(conn):
@@ -85,14 +68,9 @@ def get_rocket_info(conn):
 	rockets = cur.fetchall()
 	return rockets
 
-def get_locations(conn):
+def get_location(conn):
 	cur = conn.cursor()
 	cur.execute("SELECT location_name FROM Locations;")
 	locations = cur.fetchall()
 	return locations
 
-def get_country(conn):
-	cur = conn.cursor()
-	cur.execute("SELECT DISTINCT country FROM Locations;")
-	countries = cur.fetchall()
-	return countries
