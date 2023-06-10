@@ -16,7 +16,7 @@ db = "dbname=distest user=postgres password=1074"
 conn = psycopg2.connect(db)
 
 # Inserts the succesrates of all rockets, companies and location in the db
-#Insert_SuccesRates(conn)
+# Insert_SuccesRates(conn)
 
 # Home page of the website
 # app.route is a decorator that tells the application which URL should call the associated function
@@ -50,13 +50,13 @@ def countries():
 	locations = get_locations(conn)
 	return render_template('countries.html', countries=countries, locations=locations, cid=cid, rid=rid)
 
-# Locations page of the website where the user can choose a location
-@app.route('/locations', methods=['POST', 'GET'])
-def location():
-	cid = request.args.get('cid')
-	rid = request.args.get('rid')
-	locations = get_locations(conn)
-	return render_template('locations.html', locations=locations, cid=cid, rid=rid)
+# # Locations page of the website where the user can choose a location
+# @app.route('/locations', methods=['POST', 'GET'])
+# def location():
+# 	cid = request.args.get('cid')
+# 	rid = request.args.get('rid')
+# 	locations = get_locations(conn)
+# 	return render_template('locations.html', locations=locations, cid=cid, rid=rid)
 
 
 

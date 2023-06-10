@@ -1,4 +1,4 @@
-
+import psycopg2
 def Insert_RocketSuccesRate(conn):
     """
     Calulates and inserts the success rate of each rocket in the database.
@@ -200,9 +200,9 @@ def Update_LocationSuccesRate(conn, location_id):
     total = total_mission_rows[0]
     SuccesRate = successful / total
     
-    INS_cursor.execute("""UPDATE Company_success_rate
+    INS_cursor.execute("""UPDATE Location_success_rate
                           SET success_rate = %s
-                          WHERE company_id = %s;""", (SuccesRate, location_id))
+                          WHERE location_id = %s;""", (SuccesRate, location_id))
     conn.commit()
     return None
     
@@ -238,6 +238,7 @@ def Update_SuccesRates(conn, mission_id):
     Returns:
         None
     """
+    print("MID =", mission_id)
     cursor = conn.cursor()
     cursor.execute("""SELECT rocket_id, company_id, location_id 
                       FROM Missions
@@ -250,3 +251,7 @@ def Update_SuccesRates(conn, mission_id):
     Update_LocationSuccesRate(conn, lid)
     print("Updatede location succes rate")
     return None
+
+# db = "dbname=distest user=postgres password=1074"
+# conn = psycopg2.connect(db)
+# Insert_SuccesRates(conn)
