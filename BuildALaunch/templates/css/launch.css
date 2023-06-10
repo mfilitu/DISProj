@@ -1,0 +1,33 @@
+
+body {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://cdn.mos.cms.futurecdn.net/4FSYccgfJTfyFahzSV34gA.jpg);
+}
+    
+button {
+    background-color: rgb(187, 0, 0);
+    padding-left: 3.5cm;
+    padding-right: 3.5cm;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+    font-size: 25px;
+    text-align:  center;
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+h1   {
+    color: rgb(255, 255, 255);
+}
+
+h2   {
+    color: rgb(255, 255, 255);
+    
+}
