@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homeStyle.css') }}">
     <title>Build A Launch</title>
 </head>
 <body>
+    {% set flags = {
+        "USA" : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png",
+        "Russia" : "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png",
+        "China" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png",
+        "Kazakhstan" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/1200px-Flag_of_Kazakhstan.svg.png",
+        "France" : "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png",
+        "North Korea" : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/1200px-Flag_of_North_Korea.svg.png",
+        "Marshall Islands" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flag_of_the_Marshall_Islands.svg/1200px-Flag_of_the_Marshall_Islands.svg.png",
+    } %}
     <h1>Countries</h1>
+    <!-- Displaying flags that are clickable-->
+    <div class="wrapper">
+        {% for i in range (0, 7) %}
+            <div class="box">
+                <a href="/locations?cid={{ i }}"><img src="{{ flags[countries[i][0]] }}" alt="{{ countries[i][0] }}" width="100" height="50"></a>
+                <p>{{ countries[i][0] }}</p>
+            </div>
+        
+        {% endfor %}
+    </div>
+    
 
-    <form action="/locations" method="POST">
-        <label for="country">Select a country:</label>
-        <select name="country" id="country">
-            {% for country in countries %}
-                <option value="{{ country }}">{{ country[0] }}</option>
-            {% endfor %}
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
+    
 </body>
 </html>

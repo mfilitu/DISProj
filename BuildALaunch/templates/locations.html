@@ -1,97 +1,43 @@
-<!-- Making clickable buttons with the location logos and displaying success rates-->
+<!-- Making clickable buttons with the location pictures and displaying success rates-->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Build A Launch!!</title>
+    <title>Locations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homeStyle.css') }}">
     <style>
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container2 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .location {
-            margin: 0 10px;
-            text-align: center;
-        }
-        .h1 {
-            text-align: center;
-            justify-content: center;
-            align-items: center;
+        optgroup {
+            font-weight: bold;
+            color: rgb(184, 15, 10);
+            border-bottom: 2px solid black ;
         }
     </style>
 </head>
+<!-- choosing a location -->
+<h1>Choose a Location</h1>
 <body>
-    <h1>Choose a Country!</h1>
-    <p>cid = {{cid}} <br>
-       rid = {{rid}}
-    </p>
-    <div class="container">
-        <div class="location">
-            <a href="/rockets" target="_self">
-                <img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/spacex_logo_icon_144865.png" alt="SpaceX" style="width: 200%">
-            </a>
-            <!-- Displaying success rate and mission count-->
-        </div>
-        <div class="location">
-            <a href="/rockets" target="_self">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png" alt="NASA" style="width: 50%">
-            </a>
-            <!-- Displaying success rate and mission count-->
-        </div>
-        <div class="location">
-            <a href="/rockets" target="_self">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/US_Air_Force_Logo_Solid_Colour.svg/2560px-US_Air_Force_Logo_Solid_Colour.svg.png" alt="US Air Force" style="width: 50%">
-            </a>
-            <!-- Displaying success rate and mission count-->
-        </div>
-        <div class="location">
-            <a href="/rockets" target="_self">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Great_emblem_of_Strategic_Rocket_Forces_of_Russia.svg/800px-Great_emblem_of_Strategic_Rocket_Forces_of_Russia.svg.png" alt="RVSN USSR" style="width: 100%">
-            </a>
-            <!-- Displaying success rate and mission count-->
-        </div>
-        <div class="location">
-            <a href="/rockets" target="_self">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Arianespace_logo.svg/1200px-Arianespace_logo.svg.png" alt="Arianespace" style="width: 100%">
-            </a>
-            <!-- Displaying success rate and mission count-->
-        </div>
-    </div>
-    <div class="container2">
-        <div class="location">
-            <a href="/rockets" target="_self">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Boeing_full_logo.svg/2560px-Boeing_full_logo.svg.png" alt="Boeing" style="width: 50%">
-            </a>
-            <!-- Displaying success rate and mission count-->
-        </div>
-        <div class="location">
-            <a href="/rockets" target="_self">
-                <img src="https://seeklogo.com/images/B/blue-origin-logo-5D6380B50D-seeklogo.com.png" alt="Blue Origin" style="width: 120%">
-            </a>
-            <!-- Displaying success rate and mission count-->
-        </div>
-        <div class="location">
-            <a href="/rockets" target="_self">
-                <img src="https://upload.wikimedia.org/wikipedia/en/c/cd/China_Aerospace_Science_and_Technology_Corporation_logo.png" alt="CASC" style="width: 100%">
-            </a>
-            <!-- Displaying success rate and mission count-->
-        </div>
-        <div class="location">
-            <a href="/rockets" target="_self">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/General-Dynamics-Logo.svg/2560px-General-Dynamics-Logo.svg.png" alt="General Dynamics" style="width: 100%">
-            </a>
-            <!-- Displaying success rate and mission count-->
-        </div>
-        <div class="location">
-            <a href="/rockets" target="_self">
-                <img src="https://cdn.mos.cms.futurecdn.net/9eK4Dd9z46ZYxpqTD72FPj.jpg" alt="KCST" style="width: 100%">
-            </a>
-            <!-- Displaying success rate and mission count-->
-        </div>
-</body>
+    
+    <form action="/launch" method="GET">
+        <label for="location">Select a location:</label>
+        <select name="lid" id="location" required size = 10>
+            <!--
+            {% for country in countries %}
+                <optgroup label="{{ country[0] }}"></optgroup>
+                {% for location in locations %}
+                    {% if country[1] == location[0]%}
+                    <option value="{{ location[3] }}">{{ location[1] }}</option>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            -->
+
+            <!-- Choosing a location based on the pre-selected country -->
+            {% for location in locations %}
+                <option value="{{ location }}">{{ location }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="hidden"  value="{{ rid }}" name="rid">
+        <input type="hidden"  value="{{ cid }}" name="cid">
+        <input type="submit" value="Select Location" class="homeButton">
+    </form>
 </html>
