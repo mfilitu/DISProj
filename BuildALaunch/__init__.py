@@ -22,6 +22,7 @@ def home():
 @app.route('/companies', methods=['POST', 'GET'])
 def companies():
 	companies = get_company_info(conn)
+	
 	return render_template('companies.html', companies=companies)
 
 @app.route('/rockets', methods=['POST', 'GET'])
@@ -85,7 +86,7 @@ def get_rocket_info(conn):
 	rockets = cur.fetchall()
 	return rockets
 
-def get_locations(conn):
+def get_location(conn):
 	cur = conn.cursor()
 	cur.execute("SELECT location_name FROM Locations;")
 	locations = cur.fetchall()
