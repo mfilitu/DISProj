@@ -6,12 +6,19 @@
 </head>
 <body>  
     <div>
-        <button type="button" onclick="window.location.href='/launch';">Launch Your Rocket!!!</button>
+        <form action="/outcome" method="GET">
+            <input type="hidden" value="{{ final_success_rate }}" name="final_success_rate">
+            <input type="hidden" value="{{ rid }}" name="rid">
+            <input type="hidden" value="{{ cid }}" name="cid">
+            <input type="hidden" value="{{ lid }}" name="lid">
+            <button type="submit">Launch Your Rocket!!!</button>
+        </form>
     </div>
     
     <!-- <p>Selected Country: {{ country }}</p> -->
-    <p>Selected Rocket: {{ rname }}</p>
+    <p>Selected Rocket: {{ rname }} </p>
     <p>Selected Company: {{ cname }}</p>
     <p>Selected Location: {{ lname }}</p>
+    <p>Final Success Rate: {{ final_success_rate }}%</p>
 </body>
 </html>
