@@ -1288,3 +1288,95 @@ VALUES (
     (SELECT id FROM Rockets WHERE rocket_name = 'Unha'),
     (SELECT id FROM Companies WHERE company_name = 'KCST')
 );
+-- NASA 
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Ares 1-X'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Atlas-D Mercury'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Blue Scout II'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Mercury-Redstone'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Saturn I'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Saturn IB'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Saturn V'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Scout X-1'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Scout X-2'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Scout X-3'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Scout X-4'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Space Shuttle Atlantis'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Space Shuttle Challenger'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Space Shuttle Columbia'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Space Shuttle Discovery'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Space Shuttle Endeavour'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Thor-DM 18 Able I'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+INSERT INTO Produces (rocket_id, company_id)
+VALUES (
+    (SELECT id FROM Rockets WHERE rocket_name = 'Titan II GLV'),
+    (SELECT id FROM Companies WHERE company_name = 'NASA')
+);
+
