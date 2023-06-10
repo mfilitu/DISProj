@@ -24,7 +24,20 @@ body {
     display: flex;
     justify-content: center;
 }
-
+.wrapper2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.overlay {
+    border: 5px solid gray;
+    color: black;
+    background-color: lightgrey;
+    text-align: center;
+    height: 80px;
+    width:  100px;
+    margin: 10px;
+}
 .smallContainer {
     border: 5px solid gray;
     color: black;
