@@ -10,9 +10,16 @@
             border-bottom: 2px solid black ;
         }
     </style>
+    <script>
+        function ClickedRocket() {
+            button = document.getElementById("rocketButton");
+            button.style.backgroundColor = "#008000";
+            button.style.color = "#f5f5f5";
+        }
+    </script>
 </head>
 <body>
-    <h1>Rockets</h1>
+    <h1>Select A Rocket</h1>
 
     <form action="/countries" method="GET">
         <label for="rocket">Select a rocket:</label>
@@ -21,14 +28,13 @@
                 <optgroup label="{{ company[0] }}"></optgroup>
                 {% for rocket in rocketInfo %}
                     {% if company[1] == rocket[0]%}
-                    <option value="{{ rocket[3] }}">{{ rocket[1] }}</option>
+                    <option value="{{ rocket[3] }}" onclick="ClickedRocket()">{{ rocket[1] }}</option>
                     {% endif %}
                 {% endfor %}
             {% endfor %}
         </select>
-        <br><br>
         <input type="hidden"  value="{{ cid }}" name="cid">
-        <input type="submit" value="Select Rocket" class="homeButton">
+        <input type="submit" value="Select Rocket" class="rocketButton" id="rocketButton">
     </form>
 </body>
 </html>

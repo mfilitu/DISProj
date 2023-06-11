@@ -205,7 +205,8 @@ def get_company_info(conn):
 				   FROM companies
 				   JOIN missions on companies.id = missions.company_id
 				   JOIN company_success_rate on companies.id = company_success_rate.company_id
-				   GROUP BY companies.company_name, companies.id, company_success_rate.success_rate;
+				   GROUP BY companies.company_name, companies.id, company_success_rate.success_rate
+				   ORDER BY company_name;
 				   """)
 	companies = cur.fetchall()
 	return companies
@@ -214,7 +215,9 @@ def get_company_info(conn):
 # and creates a list of all the company names and their ids.
 def get_companies_id(conn):
 	cur = conn.cursor()
-	cur.execute("""SELECT company_name, id FROM companies""")
+	cur.execute("""SELECT company_name, id 
+				   FROM companies
+				   ORDER BY company_name""")
 	return cur.fetchall()
 
 
@@ -225,6 +228,7 @@ def get_rocket_info(conn):
 					JOIN produces ON produces.rocket_id = rockets.id
 					JOIN companies ON produces.company_id = companies.id 
 					JOIN rocket_success_rate ON rockets.id = rocket_success_rate.rocket_id
+					ORDER BY rocket_name;
 					""")
 	rockets = cur.fetchall()
 	return rockets
@@ -242,6 +246,8 @@ def get_locations(conn):
 # This function returns all distinct countries in the Locations table.
 def get_countries(conn):
 	cur = conn.cursor()
-	cur.execute("SELECT DISTINCT country FROM Locations;")
+	cur.execute("""SELECT DISTINCT country 
+				   FROM Locations
+				   ORDER BY country;""")
 	countries = cur.fetchall()
 	return countries

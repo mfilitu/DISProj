@@ -4,22 +4,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url(https://www.hdwallpapers.in/download/stars_space_darkness_night_black_sky_background_hd_space-2560x1440.jpg);
 }
-.homeButton {
-    background-color: rgb(121, 123, 121);
-    padding-left: 3.5cm;
-    padding-right: 3.5cm;
-    padding-top: 0.2cm;
-    padding-bottom: 0.2cm;
-    font-size: 25px;
-    text-align:  center;
-    cursor: pointer;
-    margin: 0;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
+
 .wrapper {
     display: flex;
     justify-content: center;
@@ -55,7 +40,6 @@ a.no-underline {
 }
 .nameHeader {
     color: rgb(184, 15, 10);
-    font-family: Baskerville;
     font-size: 17px;
 }
 .locationContainer {
@@ -88,13 +72,6 @@ a.no-underline {
     position: absolute;
     bottom: 10px;
 }
-.rocketButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 label {
     display: flex;
     align-items: center;
@@ -121,4 +98,50 @@ h1   {
 h2   {
     color: rgb(255, 255, 255);
 }
-  
+.ruleBox{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width: 400px;
+    text-align: center;
+    background-color: lightgray;
+    display: block;
+    position: relative;
+}
+.homeButton {
+    background-color: green;
+    height: 50px;
+    width: 300px;
+    font-size: 25px;
+    text-align:  center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    border-radius: 10px;
+    box-shadow: 2.5px 2.5px gray;
+    color: whitesmoke;
+}
+.rocketButton {
+    background-color: rgb(121, 123, 121);
+    padding-left: 3.5cm;
+    padding-right: 3.5cm;
+    padding-top: 0.2cm;
+    padding-bottom: 0.2cm;
+    font-size: 25px;
+    text-align:  center;
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.rules {
+    text-align: center;
+    color: black;
+    font-size: 18px;
+}
