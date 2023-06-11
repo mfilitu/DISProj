@@ -2,19 +2,19 @@
 
 CREATE TABLE IF NOT EXISTS Rockets(
     id SERIAL PRIMARY KEY,
-    rocket_name UNIQUE VARCHAR(255),
+    rocket_name VARCHAR(255) UNIQUE,
     active BOOLEAN
 );
 
 CREATE TABLE IF NOT EXISTS Companies(
     id SERIAL PRIMARY KEY,
-    company_name UNIQUE VARCHAR(255)
+    company_name VARCHAR(255) UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS Locations(
     id SERIAL PRIMARY KEY,
     country VARCHAR(255),
-    location_name UNIQUE VARCHAR(255)
+    location_name VARCHAR(255) UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS Missions(
