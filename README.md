@@ -1,3 +1,4 @@
+# DISProj
 # About
 Our DIS project is a website called "BuildALaunch" that runs on Flask, Python and
 SQL. Everyone knows the concept of Build-A-Bear, our website "BuildALaunch" resembles this concept and brings it to another level.
