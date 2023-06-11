@@ -1,4 +1,44 @@
-import psycopg2
+def Insert_SuccesRates(conn):
+    """
+    Calulates and inserts the success rate of each rocket, company,
+    and location in the database.
+
+    Args:
+        conn (connection): The connection with the database.
+
+    Returns:
+        None
+    """
+    Insert_RocketSuccesRate(conn)
+    Insert_CompanySuccesRate(conn)
+    Insert_LocationSuccesRate(conn)
+    return None
+
+def Update_SuccesRates(conn, mission_id):
+    """
+    Calulates and updates the success rate of each rocket, company,
+    and location in the database.
+
+    Args:
+        conn (connection): The connection with the database.
+        mission_id (integer): the ID of the newly inserted mission. 
+
+    Returns:
+        None
+    """
+    print("MID =", mission_id)
+    cursor = conn.cursor()
+    cursor.execute("""SELECT rocket_id, company_id, location_id 
+                      FROM Missions
+                      WHERE id = %s""", (mission_id,))
+    rid, cid, lid = cursor.fetchone()
+    Update_RocketSuccesRate(conn, rid)
+    Update_CompanySuccesRate(conn, cid)
+    Update_LocationSuccesRate(conn, lid)
+    return None
+
+
+
 def Insert_RocketSuccesRate(conn):
     """
     Calulates and inserts the success rate of each rocket in the database.
@@ -207,50 +247,7 @@ def Update_LocationSuccesRate(conn, location_id):
     return None
     
 
-def Insert_SuccesRates(conn):
-    """
-    Calulates and inserts the success rate of each rocket, company,
-    and location in the database.
 
-    Args:
-        conn (connection): The connection with the database.
-
-    Returns:
-        None
-    """
-    Insert_RocketSuccesRate(conn)
-    print("Inserted Rocket succes rate")
-    Insert_CompanySuccesRate(conn)
-    print("Inserted company succes rate")
-    Insert_LocationSuccesRate(conn)
-    print("Inserted location succes rate")
-    return None
-
-def Update_SuccesRates(conn, mission_id):
-    """
-    Calulates and updates the success rate of each rocket, company,
-    and location in the database.
-
-    Args:
-        conn (connection): The connection with the database.
-        mission_id (integer): the ID of the newly inserted mission. 
-
-    Returns:
-        None
-    """
-    print("MID =", mission_id)
-    cursor = conn.cursor()
-    cursor.execute("""SELECT rocket_id, company_id, location_id 
-                      FROM Missions
-                      WHERE id = %s""", (mission_id,))
-    rid, cid, lid = cursor.fetchone()
-    Update_RocketSuccesRate(conn, rid)
-    print("Updatede rocket succes rate")
-    Update_CompanySuccesRate(conn, cid)
-    print("Updatede company succes rate")
-    Update_LocationSuccesRate(conn, lid)
-    print("Updatede location succes rate")
-    return None
 
 # db = "dbname=distest user=postgres password=1074"
 # conn = psycopg2.connect(db)
