@@ -13,7 +13,7 @@ Run the code below to install the necessary modules.
 >$ pip install -r requirements.txt
 
 ## Database init
-1. Set your own database in the __init__.py file and let us handle the rest. 
+1. Set your own database in the __init__.py file on line 14 and let us handle the rest. 
 
 ## Running flask
 $ python3 run.py
